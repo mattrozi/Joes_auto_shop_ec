@@ -23,8 +23,9 @@ Cole.set_phone('(949) 466-9990')
 print("New Results:",Cole.get_name(),Cole.get_address(),Cole.get_phone())
 
 Tires=s.ServiceQuote(999,1000)
-print('Initial results:',Tires.get_labor_charges(),Tires.get_parts_charges(),Tires.get_sales_tax(),Tires.get_total_charges())
+print('Initial results:',Tires.get_labor_charges(),Tires.get_parts_charges(),'$',format(Tires.get_sales_tax(),',.2f'),'$',format(Tires.get_total_charges(),',.2f'))
 
-Tires.set_labor_charges(1200.2000)
-print('Final Results:',Tires.get_labor_charges(),Tires.get_parts_charges(),Tires.get_sales_tax(),Tires.get_total_charges())
+Tires.set_parts_charges(1200)
+Tires.set_labor_charges(2000)
+print('Final Results:',Tires.get_labor_charges(),Tires.get_parts_charges(),'$',format(Tires.get_sales_tax(),',.2f'),'$',format(Tires.get_total_charges(),',.2f'))
 
